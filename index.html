@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="Dominik Kukacka" />
+
+        <title>KonamiCode</title>
+
+        <script src="jquery.konamicode.1.3.js"></script>
+        <script>
+        $(document).ready(function(){
+
+
+
+
+            $(window).konamicode({
+                speed: 3500,
+                correctCombination: [UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A],
+                onCorrectCombination: function(){
+                    $('img').fadeOut(250).fadeIn(250).fadeOut(250).fadeIn(250);
+                }
+            });
+
+
+
+
+            $('.kc').css({
+                margin: ( window.innerHeight / 2 - $('.kc').height()/2) + 'px auto',
+                'text-align': 'center'
+
+            });
+        });
+        </script>
+    </head>
+
+    <body>
+        <div class='kc'>
+            <img src='konami-code.jpg' height="45" style='display: block;margin: 0 auto;' /><br />
+            Type it as fast as you can! You don't have much time!<
+        </div>
+    </body>
+</html>
